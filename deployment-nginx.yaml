@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: eks-nginx
+  name: eks-nginx
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: eks-nginx
+  template:
+    metadata:
+      labels:
+        app: eks-nginx
+    spec:
+      containers:
+      - image: 770808571291.dkr.ecr.ap-northeast-2.amazonaws.com/ecr_nginx:1e082af
+        name: eks-nginx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
